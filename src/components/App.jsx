@@ -1,7 +1,13 @@
+
+import { Searchbar } from "./Searchbar/Searchbar";
+import { ImageGallery } from "./ImageGallery/ImageGallery";
+
 export const App = () => {
   return (
     <div>
-      React homework template
+      <Searchbar />
+      <ImageGallery />
     </div>
   );
 };
+
