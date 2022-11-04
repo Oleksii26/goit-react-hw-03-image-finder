@@ -45,7 +45,7 @@ export class ImageGallery extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        const { post, query } = this.state
+        const {  query } = this.state
         if (query !== prevState.query) {
             this.searchArticles()
         }
