@@ -1,6 +1,7 @@
 import css from './ImageGalleryItem.module.css'
 
-export const ImageGalleryItem = ({ options }) => {
-    
-     return options.map((option, i) => <div className={css.gallery} key={option + i}><img  className='' src={option.img} alt={option.name} width='170'/></div>)
+export const ImageGalleryItem = ({ largeImageURL, webformatURL }) => {
+    return <li className={css.item}>
+        <img src={webformatURL} alt={webformatURL} width='300' height='200' />
+    </li>
 }  
