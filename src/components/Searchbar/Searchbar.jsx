@@ -1,5 +1,5 @@
-
 import React from 'react'
+import {ReactComponent as MyIcon} from '../img/search.svg'
 
 
 export class Searchbar extends React.Component {
@@ -18,7 +18,7 @@ export class Searchbar extends React.Component {
         return (<header className='Searchbar'>
             <form onSubmit={this.handleSubmitForm} className='SearchForm'>
                 <button type="submit" className='SearchForm-button'>
-                    <span className="button-label">Search</span>
+                    <span className="button-label"><MyIcon /></span>
                 </button>
                 <input
                     className='SearchForm-input'
@@ -36,19 +36,5 @@ export class Searchbar extends React.Component {
 
 
 
-    // state = {
-    //     query: '',
-    // }
-    // handleNameChange = e => {
-    //     this.setState({ query: e.currentTarget.value.toLowerCase() })
-    // }
-    // handleSubmit = e => {
-    //     e.preventDefault()
-    //     if(this.state.query.trim() === '') {
-    //         alert('Enter a request')
-    //         return
-    //     }
-    //     this.props.onSubmit(this.state.query)
-    //     this.setState({ query: '' })
-    // }
+
 

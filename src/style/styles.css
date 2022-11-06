@@ -101,7 +101,11 @@ img {
   clip-path: inset(50%);
   border: 0;
 }
-
+.button-label {
+  fill: rgb(48, 47, 47);
+  width: 5px;
+  height: 5px;
+}
 .SearchForm-input {
   display: inline-block;
   width: 100%;
@@ -209,3 +213,5 @@ img {
 .Button:focus {
   background-color: #303f9f;
 }
+
+
