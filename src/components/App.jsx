@@ -1,9 +1,6 @@
-
 import { Searchbar } from "./Searchbar/Searchbar";
-
 import React from "react";
 import { fetchImages } from "./Api/ArticlesApli.js";
-
 import { LoadMore } from "./LoadMore/LoadMore";
 import { ImageGallery } from "./ImageGallery/ImageGallery";
 import { Loader } from "./Loader/Loader";
@@ -41,7 +38,10 @@ export class App extends React.Component {
       <>
         <Searchbar onSubmit={this.handleSubmitForm} />
         <ImageGallery images={this.state.images} />
-        {!!this.state.totalHits && (this.state.isLoading ? (<LoadMore onLoadMore={this.handleLoadMore} />) : (<Loader />))}
+        {!!this.state.totalHits &&
+          (!this.state.isLoading ?
+            (<LoadMore onLoadMore={this.handleLoadMore} />) :
+            (<Loader />))}
       </>
     )
   }
